@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-const imagePath = (fileName: string) => `${import.meta.env.BASE_URL}images/${fileName}`;
+const imageBaseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+const imagePath = (fileName: string) => new URL(`images/${fileName}`, imageBaseUrl).toString();
 
 const socialLinks = [
   {
