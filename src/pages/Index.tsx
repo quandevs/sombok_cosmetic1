@@ -1,34 +1,36 @@
 import { useEffect, useState } from "react";
 
+const imagePath = (fileName: string) => `${import.meta.env.BASE_URL}images/${fileName}`;
+
 const socialLinks = [
   {
     name: "Facebook Page",
-    icon: "/images/facebook.png",
+    icon: imagePath("facebook.png"),
     url: "https://www.facebook.com/share/1Gfbtzyfdr/?mibextid=wwXIfr",
   },
   {
     name: "Facebook Account",
-    icon: "/images/facebook.png",
+    icon: imagePath("facebook.png"),
     url: "https://www.facebook.com/share/1DLryfVTFt/?mibextid=wwXIfr",
   },
   {
     name: "Telegram Group",
-    icon: "/images/telegram.png",
+    icon: imagePath("telegram.png"),
     url: "https://t.me/sombok_cosmetic",
   },
   {
     name: "Telegram Account",
-    icon: "/images/telegram.png",
+    icon: imagePath("telegram.png"),
     url: "https://t.me/lang_cosmetic",
   },
   {
     name: "TikTok",
-    icon: "/images/tiktok.png",
+    icon: imagePath("tiktok.png"),
     url: "https://www.tiktok.com/@zey_lang_cosmetic",
   },
   {
     name: "Instagram",
-    icon: "/images/ig.png",
+    icon: imagePath("ig.png"),
     url: "https://www.instagram.com/zeyy_lang?igsh=ankyNzZ2ZjRvYnox&utm_source=qr",
   },
 ];
@@ -121,7 +123,7 @@ const Index = () => {
         {/* Profile Logo */}
         <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-lg animate-pulse-glow mb-5">
           <img
-            src="/images/logo.png"
+            src={imagePath("logo.png")}
             alt="Zeyy Lang - Sombok Cosmetic"
             width={640}
             height={640}
