@@ -1,37 +1,39 @@
 import { useEffect, useState } from "react";
-
-const imageBaseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
-const imagePath = (fileName: string) => new URL(`images/${fileName}`, imageBaseUrl).toString();
+import facebookIcon from "@/assets/facebook.png";
+import instagramIcon from "@/assets/ig.png";
+import logoImage from "@/assets/logo.png";
+import telegramIcon from "@/assets/telegram.png";
+import tiktokIcon from "@/assets/tiktok.png";
 
 const socialLinks = [
   {
     name: "Facebook Page",
-    icon: imagePath("facebook.png"),
+    icon: facebookIcon,
     url: "https://www.facebook.com/share/1Gfbtzyfdr/?mibextid=wwXIfr",
   },
   {
     name: "Facebook Account",
-    icon: imagePath("facebook.png"),
+    icon: facebookIcon,
     url: "https://www.facebook.com/share/1DLryfVTFt/?mibextid=wwXIfr",
   },
   {
     name: "Telegram Group",
-    icon: imagePath("telegram.png"),
+    icon: telegramIcon,
     url: "https://t.me/sombok_cosmetic",
   },
   {
     name: "Telegram Account",
-    icon: imagePath("telegram.png"),
+    icon: telegramIcon,
     url: "https://t.me/lang_cosmetic",
   },
   {
     name: "TikTok",
-    icon: imagePath("tiktok.png"),
+    icon: tiktokIcon,
     url: "https://www.tiktok.com/@zey_lang_cosmetic",
   },
   {
     name: "Instagram",
-    icon: imagePath("ig.png"),
+    icon: instagramIcon,
     url: "https://www.instagram.com/zeyy_lang?igsh=ankyNzZ2ZjRvYnox&utm_source=qr",
   },
 ];
@@ -124,7 +126,7 @@ const Index = () => {
         {/* Profile Logo */}
         <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-lg animate-pulse-glow mb-5">
           <img
-            src={imagePath("logo.png")}
+            src={logoImage}
             alt="Zeyy Lang - Sombok Cosmetic"
             width={640}
             height={640}
